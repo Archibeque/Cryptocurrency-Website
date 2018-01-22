@@ -98,12 +98,12 @@ class GitHub extends Component {
 
 		//This axios all call will pull data from each API
 		axios.all([
-			axios.get(`https://api.github.com/repos/bitcoin/bitcoin`, {headers:{ "Authorization": "token 184e665271c09c2433ddd173c41d1a021cca75c4"}}),
-			axios.get(`https://api.github.com/repos/ethereum/go-ethereum`, {headers:{ "Authorization": "token 184e665271c09c2433ddd173c41d1a021cca75c4"}}),
-			axios.get(`https://api.github.com/repos/litecoin-project/litecoin`, {headers:{ "Authorization": "token 184e665271c09c2433ddd173c41d1a021cca75c4"}}),
-			axios.get(`https://api.github.com/repos/ripple/ripple`, {headers:{ "Authorization": "token 184e665271c09c2433ddd173c41d1a021cca75c4"}}),
-			axios.get(`https://api.github.com/repos/Bitcoin-ABC/bitcoin-abc`, {headers:{ "Authorization": "token 184e665271c09c2433ddd173c41d1a021cca75c4"}}),
-			axios.get(`https://api.github.com/repos/input-output-hk/cardano-sl`, {headers:{ "Authorization": "token 184e665271c09c2433ddd173c41d1a021cca75c4"}})
+			axios.get(`https://api.github.com/repos/bitcoin/bitcoin`),
+			axios.get(`https://api.github.com/repos/ethereum/go-ethereum`),
+			axios.get(`https://api.github.com/repos/litecoin-project/litecoin`),
+			axios.get(`https://api.github.com/repos/ripple/ripple`),
+			axios.get(`https://api.github.com/repos/Bitcoin-ABC/bitcoin-abc`),
+			axios.get(`https://api.github.com/repos/input-output-hk/cardano-sl`)
 			])
 		//Once the api data has been pulled, we spread each result into temporary variables
 		.then(axios.spread((bitcoinRes, ethereumRes, litecoinRes, rippleRes, bitcoinCashRes, cardanoRes) => {
